@@ -1,0 +1,34 @@
+{
+  "name": "openui5-toastr",
+  "description": "An openui5 utility that wrap toastr, a Javascript library for non-blocking notifications.",
+  "main": "index.js",
+  "authors": [
+    "Emanuele Ricci <stermi@gmail.com>"
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "qrcode",
+    "openui5",
+    "sapui5",
+    "ui5",
+    "javascript"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "homepage": "https://github.com/StErMi/openui5-toastr",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "demo",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "openui5-sap.ui.core": "openui5/packaged-sap.ui.core#1.48.7",
+    "openui5-sap.m": "openui5/packaged-sap.m#1.48.7",
+    "openui5-themelib_sap_belize": "openui5/packaged-themelib_sap_belize#1.48.7",
+    "openui5-sap.ui.layout": "openui5/packaged-sap.ui.layout#1.48.7"
+  }
+}

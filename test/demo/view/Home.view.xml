@@ -1,0 +1,191 @@
+<mvc:View controllerName="Demo.controller.Home" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="{i18n>appTitle}">
+				<content>
+
+					<f:SimpleForm
+						editable="true"
+						layout="ResponsiveGridLayout"
+						title="{i18n>toastGeneratedCodeMessage}"
+						labelSpanXL="1"
+						labelSpanL="1"
+						labelSpanM="1"
+						labelSpanS="1"
+						adjustLabelSpan="false"
+						emptySpanXL="4"
+						emptySpanL="4"
+						emptySpanM="4"
+						emptySpanS="0"
+						columnsXL="1"
+						columnsL="1"
+						columnsM="1"
+						singleContainerFullSize="false" >
+						<f:content>
+							<TextArea id="generated_toast_code" value="" growing="true" width="100%" enabled="true" visible="true" rows="4" />	
+						</f:content>
+					</f:SimpleForm>
+				
+
+					<f:SimpleForm
+						editable="true"
+						layout="ResponsiveGridLayout"
+						title="{i18n>toastConfigurationForm}"
+						labelSpanXL="4"
+						labelSpanL="4"
+						labelSpanM="12"
+						labelSpanS="12"
+						adjustLabelSpan="false"
+						emptySpanXL="0"
+						emptySpanL="0"
+						emptySpanM="0"
+						emptySpanS="0"
+						columnsXL="2"
+						columnsL="2"
+						columnsM="1"
+						singleContainerFullSize="false" >
+						<f:content>
+							<core:Title text="" />
+									
+							<Label text="{i18n>toastTitle}" />
+							<Input value="{temp>/toast/title}" />
+							
+							<Label text="{i18n>toastMessage}" />
+							<Input value="{temp>/toast/message}" />
+
+							<Label text="{i18n>toastConfig}" />
+							<VBox>
+								<CheckBox text="{i18n>toastCloseButton}" selected="{temp>/toast/config/closeButton}" select="onCloseButtonSelected" />
+								<CheckBox text="{i18n>toastToastClick}" selected="{temp>/onclick_flagged}" />
+								<CheckBox text="{i18n>toastToastShow}" selected="{temp>/onshow_flagged}" />
+								<CheckBox text="{i18n>toastToastHide}" selected="{temp>/onhidden_flagged}" />
+								<CheckBox text="{i18n>toastToastCloseClick}" selected="{temp>/oncloseclick_flagged}" enabled="{temp>/toast/config/closeButton}" />
+								<CheckBox text="{i18n>toastDebug}" selected="{temp>/toast/config/debug}" />
+								<CheckBox text="{i18n>toastProgressBar}" selected="{temp>/toast/config/progressBar}" />
+								<CheckBox text="{i18n>toastPreventDuplicates}" selected="{temp>/toast/config/preventDuplicates}" />
+								<CheckBox text="{i18n>toastButtonForceClearToast}" selected="{temp>/toast/config/tapToDismiss}" />
+								<CheckBox text="{i18n>toastNewestOnTop}" selected="{temp>/toast/config/newestOnTop}" />
+								<CheckBox text="{i18n>toastRTL}" selected="{temp>/toast/config/rtl}" />
+							</VBox>
+
+							<core:Title text="" />
+							<Label text="{i18n>toastPosition}" />
+							<RadioButtonGroup select="onToastPositionSelect">
+								<buttons>
+									<RadioButton text="{i18n>positionTopRight}">
+										<customData><core:CustomData key="positionClass" value="toast-top-right" /></customData>
+									</RadioButton>
+									<RadioButton text="{i18n>positionBottomRight}">
+										<customData><core:CustomData key="positionClass" value="toast-bottom-right" /></customData>
+									</RadioButton>
+									<RadioButton text="{i18n>positionBottomLeft}">
+										<customData><core:CustomData key="positionClass" value="toast-bottom-left" /></customData>
+									</RadioButton>
+									<RadioButton text="{i18n>positionTopLeft}">
+										<customData><core:CustomData key="positionClass" value="toast-top-left" /></customData>
+									</RadioButton>
+									<RadioButton text="{i18n>positionTopFullWidth}">
+										<customData><core:CustomData key="positionClass" value="toast-top-full-width" /></customData>
+									</RadioButton>
+									<RadioButton text="{i18n>positionBottomFullWidth}">
+										<customData><core:CustomData key="positionClass" value="toast-bottom-full-width" /></customData>
+									</RadioButton>
+									<RadioButton text="{i18n>positionTopCenter}">
+										<customData><core:CustomData key="positionClass" value="toast-top-center" /></customData>
+									</RadioButton>
+									<RadioButton text="{i18n>positionBottomCenter}">
+										<customData><core:CustomData key="positionClass" value="toast-bottom-center" /></customData>
+									</RadioButton>
+								</buttons>
+							</RadioButtonGroup>
+
+						</f:content>
+					</f:SimpleForm>
+					<f:SimpleForm 
+						editable="true"
+						layout="ResponsiveGridLayout"
+						title=""
+						labelSpanXL="4"
+						labelSpanL="4"
+						labelSpanM="12"
+						labelSpanS="12"
+						adjustLabelSpan="false"
+						emptySpanXL="0"
+						emptySpanL="0"
+						emptySpanM="0"
+						emptySpanS="0"
+						columnsXL="2"
+						columnsL="2"
+						columnsM="1"
+						singleContainerFullSize="false">
+						<f:content>
+							<core:Title text="" />
+							
+							<Label text="{i18n>toastShowEasing}" />
+							<ComboBox
+								selectedKey="{temp>/toast/config/showEasing}">
+								<core:Item key="swing" text="{i18n>easingSwing}" />
+								<core:Item key="linear" text="{i18n>easingLinear}" />
+							</ComboBox>
+							
+							<Label text="{i18n>toastHideEasing}" />
+							<ComboBox
+								selectedKey="{temp>/toast/config/hideEasing}">
+								<core:Item key="swing" text="{i18n>easingSwing}" />
+								<core:Item key="linear" text="{i18n>easingLinear}" />
+							</ComboBox>
+							
+							<Label text="{i18n>toastShowMethod}" />
+							<ComboBox
+								selectedKey="{temp>/toast/config/showMethod}">
+								<core:Item key="show" text="{i18n>methodShow}" />
+								<core:Item key="fadeIn" text="{i18n>methodFadIn}" />
+								<core:Item key="slidDown" text="{i18n>methodSlideDown}" />
+							</ComboBox>
+							
+							<Label text="{i18n>toastHideMethod}" />
+							<ComboBox
+								selectedKey="{temp>/toast/config/hideMethod}">
+								<core:Item key="hide" text="{i18n>methodHide}" />
+								<core:Item key="fadeOut" text="{i18n>methodFadIn}" />
+								<core:Item key="slidUp" text="{i18n>methodSlideDown}" />
+							</ComboBox>
+
+							<core:Title text="" />
+
+							<Label text="{i18n>toastShowDuration}" />
+							<Input value="{temp>/toast/config/showDuration}" />
+
+							<Label text="{i18n>toastHideDuration}" />
+							<Input value="{temp>/toast/config/hideDuration}" />
+
+							<Label text="{i18n>toastTimeOut}" />
+							<Input value="{temp>/toast/config/timeOut}" />
+
+							<Label text="{i18n>toastExtendedTimeOut}" />
+							<Input value="{temp>/toast/config/extendedTimeOut}" />
+
+						</f:content>
+					</f:SimpleForm>																									
+					
+				</content>
+				<footer>
+					<Toolbar>
+						<Button text="{i18n>buttonClearLast}" press="onClearLastToastClick" />		
+						<Button text="{i18n>buttonClearAll}" press="onClearAllToastClick" />	
+
+						<ToolbarSpacer/>
+						<Button text="{i18n>buttonInfoToast}" press="onToastInfoClick" />	
+						<Button text="{i18n>buttonSuccessToast}" press="onToastSuccessClick" />	
+						<Button text="{i18n>buttonWarningToast}" press="onToastWarningClick" />	
+						<Button text="{i18n>buttonErrorToast}" press="onToastErrorClick" />		
+					</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

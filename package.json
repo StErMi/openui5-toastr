@@ -1,0 +1,41 @@
+{
+  "name": "openui5-toastr",
+  "version": "0.0.1",
+  "description": "An openui5 utility that wrap toastr, a Javascript library for non-blocking notifications.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StErMi/openui5-toastr"
+  },
+  "keywords": [
+    "toast",
+    "openui5",
+    "sapui5",
+    "ui5",
+    "javascript"
+  ],
+  "author": {
+    "name": "Emanuele Ricci",
+    "email": "stermi@gmail.com"
+  },
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified. Please add some.\" && exit 1",
+    "postinstall": "bower install",
+    "start": "grunt"
+  },
+  "devDependencies": {
+    "bower": "^1.8.0",
+    "connect-livereload": "^0.6.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-uglify": "^2.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-eslint": "^19.0.0",
+    "grunt-openui5": "^0.12.0",
+    "toastr": "https://github.com/CodeSeven/toastr/archive/2.1.3.tar.gz"
+  }
+}

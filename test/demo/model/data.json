@@ -1,0 +1,31 @@
+{
+    "onclick_flagged": false,
+    "onshow_flagged": false,
+    "onhidden_flagged": false,
+    "oncloseclick_flagged": false,
+    "toast": {
+        "title": "",
+        "message": "",
+        "config": {
+            "closeButton": false,
+            "debug": false,
+            "progressBar": false,
+            "preventDuplicates": false,
+            "tapToDismiss": true,
+            "newestOnTop": true,
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut",
+            "showDuration": 300,
+            "hideDuration": 1000,
+            "timeOut": 5000,
+            "extendedTimeOut": 1000,
+            "rtl": false,
+            "onShown": null,
+            "onHidden": null,
+            "onclick": null,
+            "onCloseClick": null
+        }
+    }
+}

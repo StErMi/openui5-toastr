@@ -48,11 +48,15 @@ Toastr.info('This is a call title', 'And this is a call message', {
   "hideEasing": "linear",
   "showMethod": "fadeIn",
   "hideMethod": "fadeOut",
-  "showDuration": "300",
-  "hideDuration": "1000",
-  "timeOut": "5000",
-  "extendedTimeOut": "1000",
-  "onclick": null
+  "showDuration": 300,
+  "hideDuration": 1000,
+  "timeOut": 5000,
+  "extendedTimeOut": 1000,
+  "rtl": false,
+  "onShown": null,
+  "onHidden": null,
+  "onclick": null,
+  "onCloseClick": null
 });
 ```
 

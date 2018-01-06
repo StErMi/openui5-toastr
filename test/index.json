@@ -16,8 +16,8 @@
 				"version": "0.0.1",
 				"description": "Powerfull utility to generated stunning Toast",
 				"samples": [{
-					"id": "Flat Date Picker",
-					"name": "DateTime Picker",
+					"id": "Toastr",
+					"name": "Toastr",
 					"description": "Powerfull utility to generated stunning Toast",
 					"url": "https://stermi.github.io/openui5-toastr/test/demo/"
 				}]

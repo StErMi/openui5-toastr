@@ -1,6 +1,6 @@
-# openui5-qrcode
+# openui5-toastr
 
-openui5-qrcode is an OpenUI5 utility that wrap [toastr](https://github.com/CodeSeven/toastr), a Javascript library for non-blocking notifications.
+openui5-toastr is an OpenUI5 utility that wrap [toastr](https://github.com/CodeSeven/toastr), a Javascript library for non-blocking notifications.
 
 ![openui5-toastr preview](https://raw.githubusercontent.com/StErMi/openui5-toastr/master/preview.PNG)
 
